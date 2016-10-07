@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'html_form',
     'formspy_form',
     'fileupload_form',
+    'formset_form',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

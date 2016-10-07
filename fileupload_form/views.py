@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from .forms import FileUploadFormForm, FileUploadFormModelForm
+from .models import FileUploadFormModel
 def index(request):
     if request.method == 'POST':
         #

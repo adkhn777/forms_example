@@ -25,12 +25,14 @@ urlpatterns = [
     url(r'^model-form/', include('model_form.urls')),
     url(r'^html-form/', include('html_form.urls')),
     url(r'^formspy-form/', include('formspy_form.urls')),
-    url(r'^fileupload-form/', include('fileupload_form.urls'))
+    url(r'^fileupload-form/', include('fileupload_form.urls')),
+    url(r'^formset-form/', include('formset_form.urls')),
+
 ]
 
 if settings.DEBUG:
     urlpatterns += [
-        url(r'^media/(?P<path>,*)$', serve, {
+        url(r'^media/(?P<path>.*)$', serve, {
             'document_root': settings.MEDIA_ROOT,
         }),
     ]
