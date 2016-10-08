@@ -1,9 +1,8 @@
 from django import forms
+from .models import FormsetFormModel
+class FormsetFormForm(forms.ModelForm):
+    class Meta:
+        model = FormsetFormModel
+        fields = ['name', 'bio']
 
-class FormsetFormForm(forms.Form):
-    name = forms.CharField(max_length=20)
-    bio = forms.Textarea(max_length=200)
-
-class FormssetFormFormTwo
-
-FormsetFormFormSet = forms.formset_factory(FormsetFormForm)
+FormsetFormFormSet = forms.formset_factory(FormsetFormForm, extra=5)
